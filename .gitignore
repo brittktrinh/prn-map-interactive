@@ -1,0 +1,8 @@
+/node_modules/
+/.idea/
+/.fleet/
+.DS_Store
+.envrc
+.env
+
+/lib/
