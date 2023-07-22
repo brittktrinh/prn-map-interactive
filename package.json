@@ -1,4 +1,15 @@
 {
+  "name": "map-interactive",
+  "version": "0.1.0",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "node lib/src/index.js",
+    "check": "tsc --noEmit",
+    "test": "playwright test",
+    "fmt": "prettier --write .",
+    "fix": "prettier --write .; eslint --fix .",
+    "lint": "prettier --check . && eslint ."
+  },
   "devDependencies": {
     "typescript": "^5.1.6"
   }
