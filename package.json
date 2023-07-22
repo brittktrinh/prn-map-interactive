@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "prestart": "tsc",
-    "start": "node lib/src/index.js",
+    "start": "node lib/src/index.ts",
     "check": "tsc --noEmit",
     "test": "playwright test",
     "fmt": "prettier --write .",
