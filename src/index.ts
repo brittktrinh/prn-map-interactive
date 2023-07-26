@@ -9,3 +9,13 @@ const MANDATES_CSV =
 const CITIES_JSON =
   "https://raw.githubusercontent.com/ParkingReformNetwork/parking-lot-map/main/data/score-cards.json";
 
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+
+rl.question("Guess the percentage: ", function(percent) {
+    console.log(`${percent} was guessed.\n`);
+    rl.close();
+})
