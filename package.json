@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "prestart": "tsc",
-    "start": "node lib/src/index.ts",
+    "start": "node lib/index.js",
     "check": "tsc --noEmit",
     "test": "playwright test",
     "fmt": "prettier --write .",
@@ -11,7 +11,13 @@
     "lint": "prettier --check . && eslint ."
   },
   "devDependencies": {
+    "@types/node": "^20.4.5",
     "prettier": "3.0.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.42.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0"
   }
 }
