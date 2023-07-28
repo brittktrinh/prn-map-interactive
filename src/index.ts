@@ -16,14 +16,20 @@ const parking_csv = axios
     // Select a city to guess the answer to
     let selectedCity =
       cities[Math.floor(Math.random() * (Object.keys(cities).length + 1))];
-    console.log(selectedCity);
+
+    // Generate options for multiple choice response
+    let option_a = Math.floor(Math.random() * 101);
+    console.log(option_a);
+
+    // Prompt the user for the minigame
+    rl.question(`Welcome!\nWhat is the percentage of ${selectedCity}?\nA) ${option_a}\n`, function (answer) {
+      console.log(answer);
+    });
+
   })
   .catch((err) => {
     console.log(err);
   });
-
-let option_a = Math.floor(Math.random() * 101);
-console.log(option_a);
 
 let userInput = "";
 
@@ -31,9 +37,3 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-
-rl.question("Does this work?\n", function (answer) {
-  console.log(answer);
-});
-
-rl.close();
