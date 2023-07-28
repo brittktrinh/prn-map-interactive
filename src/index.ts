@@ -10,7 +10,8 @@ const parking_csv = axios
     "https://raw.githubusercontent.com/ParkingReformNetwork/parking-lot-map/main/data/score-cards.json",
   )
   .then((response) => {
-    console.log(response.data);
+    let cities = Object.keys(response.data);
+    console.log(Object.keys(response.data));
   })
   .catch((err) => {
     console.log(err);
@@ -18,6 +19,8 @@ const parking_csv = axios
 
 let option_a = Math.floor(Math.random() * 101);
 console.log(option_a);
+
+let userInput = "";
 
 const rl = readline.createInterface({
   input: process.stdin,
